@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+     <p> YouTube Subscribe Button</p>
+     <button onclick = "subscribe()" class="js-subscribe-button">Subscribe</button>
+    <!--
+     <button class="js-subscribe-button"
+      onclick=" const buttonElement = document.querySelector(.js-subscribe-button');
+      
+      if (buttonElement.innerText === 'Subscribe')
+      {
+        buttonElement.innerHTML = 'Subscribed'
+      }
+      else 
+      {
+        buttonElement.innerHTML = 'Subscribe'
+      }
+     ">Subscribe</button>
+    -->
+        <p>Amazon Shipping Calculator</p>
+
+        <input placeholder="Cost of order" 
+        class="js-cost-input" onKeydown ="console.log(event.key)
+        handleCostKeydown(event);
+        ">
+
+        <button onclick = "
+        calculateTotal()" 
+        >Calculator</button>
+
+        <p class="js-total-cost" ></p>
+
+  </body>
+  <script>
+    // document object represents the webpage
+    // window object represents the browser i.e,webpage + console + popups + ...
+
+    //window.document is equivalent to document
+    //window.console.log("Console") is equivalent to console.log()
+    //window.alert is equivalent to alert
+
+    //As 'window' is a default object ,there is no need to mention 'window' before the above mentioned methods and properties
+
+    function handleCostKeydown(event)
+    {
+      if (event.key === 'Enter')
+        {
+          calculateTotal()
+        }
+
+    }
+    function calculateTotal()
+    {
+       const inputElement = document.querySelector(".js-cost-input");
+       let cost = Number(inputElement.value)
+    // as cost is a string to convert that into number cost=Number(cost);
+
+       if (cost < 40 && cost >0)
+       {
+        cost=cost+10
+       }
+       
+       document.querySelector(".js-total-cost").innerHTML =`$${cost}`;
+    }
+
+    function subscribe()
+    {
+      const buttonElement = document.querySelector
+      ('.js-subscribe-button');
+      
+      if (buttonElement.innerText === 'Subscribe')
+      {
+        buttonElement.innerHTML = 'Subscribed'
+      }
+      else 
+      {
+        buttonElement.innerHTML = 'Subscribe'
+      }
+    }
+      
+  </script>
+</html>

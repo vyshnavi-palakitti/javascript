@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions Exercise</title>
+  </head>
+  <body>
+    <script>
+
+      // Greetings
+
+      function greet(name)
+      {
+        GREET= !name ? 'Hi there!' : `Hello ${name}`;
+        console.log(GREET)
+      } 
+
+      greet('PSPV');
+      greet();
+
+      //conversions
+
+      function convertToFahrenheit(celsius)
+      {
+        Fahrenheit=(celsius * 9/5)+32
+        return Fahrenheit;
+      }
+
+      function convertToCelsius(fahrenheit)
+      {
+        Celsius=(fahrenheit -32)* 5/9
+        return Celsius;
+      }
+
+      console.log(convertToFahrenheit(100));
+      console.log(convertToCelsius(212));
+
+
+      function convertTemperature(degree,unit)
+      {
+        if (unit === 'F') 
+        {
+          c=convertToCelsius(degree);
+          return (`${c}C`)
+        }
+        else if (unit === 'C')
+        {
+          f=convertToFahrenheit(degree);
+          return (`${f}F`)
+        }
+      }
+
+      console.log(convertTemperature(100,'C'))
+      console.log(convertTemperature(212,'F'))
+
+    </script>
+  </body>
+</html>

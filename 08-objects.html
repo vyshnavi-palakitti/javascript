@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      // syntax of object : object-name = {property1 : value1,property2 : value2,........}
+      //Objects lets us to group multiple values together and lets us to use multiple values together
+      const products={name:'cotton',price:100}
+      console.log(typeof products)
+      console.log(products)
+
+      //dot notation
+      //products.notExist = undefined
+      console.log(products.name)
+      console.log(products.price)
+
+      //To change a value in an object use dot notation
+      products.name = 'Pure cotton'
+      console.log(products)
+
+      // using above syntax , Adding the value to an object 
+      products.availState = 'Andhrapradesh'
+      products.newProperty ='true'
+      console.log(products)
+
+      // deleting the value in an object
+      delete products.newProperty;
+      console.log(products);
+      */
+
+      /*
+      const products2 = {
+        name:'shirt',
+        'delivery-time': '1 day',
+        rating:{
+          stars:4.5,
+          count:87
+        },
+        fun: function function1(){
+          console.log('function inside object');
+        }
+      }
+      console.log(products2)
+
+      //dot notation
+      console.log(products2.name)
+
+      //bracket notation
+      console.log(products2['name'])
+
+      // the cases where bracket notation that replaces the dot natation
+      // In 'delivery-time' , dot notation considers '-' as minus  
+      console.log(products2['delivery-time']);
+      
+      // Inside of an object , we can save any type of value i.e, number,string,booleans,objects,functions (A function is another type of value)
+      console.log(products2.rating.stars)
+      console.log(products2.fun());
+      // Function inside object = method  i.e,product2.fun())In console.log() method , console - object and log() - function
+      console.log(typeof console)
+      console.log(typeof console.log)
+      // same case in Math.random(), Math - object and random() - function
+      console.log(typeof Math)
+      console.log(typeof Math.random)
+
+
+      // Built-in Objects  :  console,Math,JSON,localStorage
+
+      // JSON - javascript object notation
+      // similar to javascript object i.e , in which the JSON has the (i) all the properties and values are double quoted   , (ii) it does not contain functions as a values of objects 
+      // JSON can be used when sending data between two computers , when we store data and it is more universal
+
+      // Built-in JSON Object 
+      // convert : JavaScript Object => JSON
+      // Ex : let's convert our product2 JavaScript Object to JSON by stingify() function available in built-in 'JSON' Object
+      console.log(JSON.stringify(products2))
+      console.log(typeof JSON.stringify(products2))
+
+      // convert : JSON => JavaScript Object by parse() function available in built-in 'JSON' Object.
+      const jsonString = JSON.stringify(products2)
+      console.log(JSON.parse(jsonString))
+
+      // localStorage 
+      // Variables we are working with are temporary i.e, if we refresh / close the page in web all the variables are deleted
+      // In localStorage the variables won't get deleted though we refresh / close the page
+      // we wii see this localStorage object in rock-paper-scissors code
+
+      */
+      // Auto-boxing - wraps the string into a special object
+      // Through this strings can have properties (length) and methods (toUpperCase())
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      //It also works for strings,numbers,booleans
+      //But won't work for null ,undefined
+      console.log(3.0.toString());
+      console.log(true.toString());
+      
+      //Objects are references 
+      //The objects gets the reference that points to the location in computer's memory . i.e, they store the references
+      const object1={
+        message:'hello!'
+      }
+      //copy by reference
+      //object2 copies the reference stored in object1
+      const object2=object1;
+      
+      //To change the value of the property in an object which is declared with 'const'.
+      //It's possible to change that as the object stores only the reference of property:value pair but not property:value.pair   .
+      object1.message='Good job!'
+      console.log(object1)
+      // As object2 copies the reference of object1
+      console.log(object2)  
+
+      // comparing two objects with same property:value pair but not refering to the same references
+      //i.e, Actually we are comparing the reference but not the values inside.
+      const object3={
+        message:'Good job!'
+      }
+      console.log(object1 === object3)
+      // As object2 copies the reference of object1
+      console.log(object1 === object2)
+
+      //Shortcuts for Objects
+      const object4 = {
+        message:'Good job!',
+        price: 799
+      }
+      // by dot notation
+      const message1=object4.message;
+      // shortcut for the above notation - destructuring
+      //Taking the properties out of an object.
+      const {message,price}=object4;
+      console.log(message)
+      console.log(price)
+
+      //Shorthand Property
+      const object5={
+        //message: message(takes the value inside the message variable)  - instead of this 
+        message,
+      /*method: function function1() {
+          console.log("method");
+        }
+      */
+        //shorthand method for above method is
+        method() {
+          console.log("method");
+        }
+      }
+      console.log(object5);
+
+      //Shorthand method
+      object5.method();
+    </script>
+  </body>
+</html>

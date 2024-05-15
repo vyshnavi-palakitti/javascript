@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+     <script>
+        function function1() {
+          console.log('Hello')
+          console.log(2+2)
+        }
+
+
+      //calling the function (or) running the function (or) executing the function
+        function1(); 
+        function1();
+
+         function calculateTax(cost,taxPercent)
+         {
+            console.log(taxPercent)
+            console.log(cost * taxPercent)
+         }
+
+         calculateTax(2000,0.1);  //300,2000 are arguments
+         calculateTax(300);  // taxPercent= undefined,cost*taxPercent = NaN
+
+         //Inorder to remove that conflict above we have to set a defaulet value for the parameter
+        function  cT(c,T=0.2)
+        {
+          console.log(c*T)
+        }
+
+        cT(300);
+
+        
+     </script>
+  </body>
+</html>

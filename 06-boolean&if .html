@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BOOLEANS</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof true)
+      false
+      console.log(5<3)  
+      console.log(5 == '5.0')
+      console.log(5 === '5.0')
+      console.log(5 != '5.0')
+      console.log(5 !== '5.0')
+      console.log(5+3 <= 36/4)
+
+      if (5<3){
+        console.log('greater');
+      }
+      else {
+        console.log('Lesser')
+      }
+
+      const ageLimit=18;
+      if (ageLimit<=19) {
+        console.log('You can drive')
+      }
+      else if (ageLimit>17) {
+        console.log('Alomost there!')
+      }
+      else {
+        console.log('You can not drive')
+      }
+
+      //Comparision operators
+      if (5>3 && 4>5) {
+        console.log('AND operator');
+      }
+      else if(5>3 || 4>5) {
+        console.log('OR operator');
+      }
+
+      // Truthy value
+      if (5) {
+        console.log('truthy')
+      }
+      // Falsy values are  false,0,'',NaN,undefined,null
+      console.log(!0)
+      console.log(false)
+      console.log('')
+      console.log('String'/2)
+      //undefined can assign automatically only for let
+      let v;
+      console.log(v)
+      //If you want to use for const ,
+      const v1=undefined
+      console.log(v1)
+
+      // Ternary Operator ?:
+      result = (5>3) ? 'Greater' : 'Lesser'
+      console.log(result)
+      /* Guard Operator && - short-circit evaluation 
+                            - Stops early, if it is false
+                            - Doesn't need to run the code on the right */
+      result1 = false && 'string';
+      console.log(result1)
+      result2 = 5 && 'Hello';
+      console.log(result2)
+      // Default Operator ||
+      result3 = true || 'hai'
+      console.log(result3)
+      result4='EUR' || 'USD';
+      console.log(result4)
+      result5 = undefined || 'USD';
+      console.log(result5)
+</script>
+  </body>
+</html>
